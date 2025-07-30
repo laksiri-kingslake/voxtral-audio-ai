@@ -1,0 +1,7 @@
+mistral-common
+git+https://github.com/huggingface/transformers
+gradio
+torch
+accelerate
+librosa
+gradio_modal 
