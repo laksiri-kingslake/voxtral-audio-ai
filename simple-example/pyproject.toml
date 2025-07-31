@@ -4,4 +4,15 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "accelerate>=1.9.0",
+    "gradio>=5.39.0",
+    "gradio-modal>=0.0.4",
+    "librosa>=0.11.0",
+    "mistral-common>=1.8.3",
+    "torch>=2.7.1",
+    "transformers",
+]
+
+[tool.uv.sources]
+transformers = { git = "https://github.com/huggingface/transformers" }

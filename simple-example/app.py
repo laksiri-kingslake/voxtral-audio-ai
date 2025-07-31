@@ -1,11 +1,11 @@
 import gradio as gr
 import torch
 from transformers import AutoProcessor, VoxtralForConditionalGeneration
-import spaces
+# import spaces
 
 #### Functions
 
-@spaces.GPU
+# @spaces.GPU
 def process_transcript(language: str, audio_path: str) -> str:
     """Process the audio file to return its transcription.
 
@@ -29,7 +29,7 @@ def process_transcript(language: str, audio_path: str) -> str:
         return decoded_outputs[0]
 ###
 
-@spaces.GPU
+# @spaces.GPU
 def process_translate(language: str, audio_path: str) -> str:
     if audio_path is None:
         return "Please provide some input audio: either upload an audio file or use the microphone."
@@ -56,7 +56,7 @@ def process_translate(language: str, audio_path: str) -> str:
         return decoded_outputs[0]
 ###
 
-@spaces.GPU
+# @spaces.GPU
 def process_chat(question: str, audio_path: str) -> str:
     if audio_path is None:
         return "Please provide some input audio: either upload an audio file or use the microphone."
@@ -235,4 +235,4 @@ with gr.Blocks(title="Voxtral") as voxtral:
 ### Launch the app
 
 if __name__ == "__main__":
-    voxtral.queue().launch()
+    voxtral.queue().launch(server_name="0.0.0.0", server_port=8080)
