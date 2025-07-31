@@ -235,4 +235,4 @@ with gr.Blocks(title="Voxtral") as voxtral:
 ### Launch the app
 
 if __name__ == "__main__":
-    voxtral.queue().launch(server_name="0.0.0.0", server_port=8080)
+    voxtral.queue().launch(server_name="0.0.0.0", server_port=8080, share=True)
